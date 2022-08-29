@@ -1,3 +1,5 @@
-console.log("hello world");
-console.log("im working");
-console.log("hello again");
+import { handleSubmit } from "./form";
+
+const form = document.querySelector("#form");
+
+form?.addEventListener("submit", handleSubmit);
