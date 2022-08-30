@@ -14,17 +14,17 @@
     <form id="form" class="todos-form">
 
         <label for="title">Title:</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" required>
 
         <label for="description">Description:</label>
         <input type="text" name="description" id="description">
 
         <label for="date">Due Date:</label>
-        <input type="date" id="date" name="date">
+        <input type="date" id="date" name="date" required>
 
 
         <label for="priority">Priority:</label>
-        <select name="priority" id="priority">
+        <select name="priority" id="priority" required>
             <option value="low">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>
@@ -34,11 +34,15 @@
         <input type="text" name="notes" id="notes">
 
         <label for="project">Project:</label>
-        <input type="text" name="project" id="project">
+        <input type="text" name="project" id="project" required>
 
         <button type="submit">SUBMIT</button>
 
     </form>
+
+    <ul id="todos-list" class="todos-list">
+
+    </ul>
 
 
     <script src="static/bundle/script.js"></script>
