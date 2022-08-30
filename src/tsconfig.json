@@ -2,12 +2,14 @@
   "compilerOptions": {
     "target": "es5",
     "module": "ESNEXT",
+    "sourceMap": true,
     "rootDir": "./",
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2016", "dom"]
   }
 }
