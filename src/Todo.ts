@@ -6,6 +6,14 @@ export const Todo = (
   notes: string,
   project: string
 ) => {
+  if (notes === "") {
+    notes = "No notes";
+  }
+
+  if (description === "") {
+    description = "No description.";
+  }
+
   return {
     title,
     description,
