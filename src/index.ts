@@ -29,6 +29,11 @@ const addTodoToArray = (todo: Todo) => {
   localStorage.setItem("todosArray", JSON.stringify(todos));
 };
 
+const deleteTodo = (index: string) => {
+  todos.splice(Number(index), 1);
+  renderTodos(todos);
+};
+
 if (localStorage.getItem("todosArray")) {
   const parsedArray: Array<Todo> = JSON.parse(
     localStorage.getItem("todosArray")!
@@ -94,6 +99,8 @@ function renderTodos(todos: Array<Todo>) {
 function createTodoEl(todo: Todo) {
   const todoEl = document.createElement("p");
   todoEl.innerText = `${todo.title}, ${todo.description}, ${todo.dueDate},${todo.priority}, ${todo.notes}, ${todo.project}`;
-
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "delete";
+  todoEl.append(deleteBtn);
   return todoEl;
 }
